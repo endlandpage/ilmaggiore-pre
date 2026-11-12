@@ -899,9 +899,20 @@ form label { font-size: 16px; }
 }
 .header-menu-link { display: none; }
 @media (max-width:760px) {
-  .header { gap: 8px; padding-inline: clamp(10px, 3vw, 20px); }
-  .header .brand { margin-inline-end: auto; }
-  .header .reserve-link { margin-inline-start: 0; white-space: nowrap; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { overflow-x: clip; }
+  .header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, max-content) minmax(0, max-content) 44px;
+    gap: clamp(5px, 1.5vw, 8px);
+    padding-inline: clamp(8px, 2.5vw, 20px);
+  }
+  .header .brand { min-width: 0; white-space: normal; }
+  .header .brand > span { font-size: clamp(21px, 6vw, 28px); }
+  .header .brand small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .header .reserve-link { min-width: 0; margin-inline-start: 0; }
+  .header .reserve-link span { margin-left: 4px; }
+  .header .nav-toggle { width: 44px; align-items: center; }
   .header-menu-link {
     display: inline-grid;
     place-items: center;
@@ -911,7 +922,8 @@ form label { font-size: 16px; }
     border-radius: 24px;
     color: #ffe4bc;
     font-size: 11px;
-    white-space: nowrap;
+    min-width: 0;
+    text-align: center;
   }
   .hero-copy {
     position: absolute;
@@ -930,10 +942,11 @@ form label { font-size: 16px; }
     line-height: 1.1;
   }
 }
-@media (max-width:359px) {
-  .header { gap: 6px; }
-  .header .brand small { letter-spacing: .45px; }
+@media (max-width:430px) {
   .header .reserve-link span { display: none; }
+}
+@media (max-width:359px) {
+  .header .brand small { letter-spacing: .45px; }
   .header-menu-link { font-size: 10px; padding-inline: 7px; }
 }
 @media (max-width:760px) {
