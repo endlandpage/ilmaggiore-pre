@@ -981,6 +981,122 @@ form label { font-size: 16px; }
 .dessert-card .dessert-kicker { color: #78400f; font-size: 13px; }
 .dessert-card h3 { font-size: clamp(25px, 5vw, 38px); }
 .dessert-card h3 + p { margin-block: 4px 6px; font-size: 15px; }
+#floor-dialog {
+  width: min(960px, calc(100vw - 24px));
+  border-radius: 18px;
+  border-color: #a77d52;
+  scroll-padding-block: 64px 20px;
+}
+#floor-dialog .dialog-toolbar {
+  padding-inline: clamp(16px, 4vw, 32px);
+  color: #f5d8b0;
+  background: #312219;
+  border-color: #624830;
+}
+#floor-dialog .dialog-toolbar > span { font-size: 11px; letter-spacing: .16em; }
+#floor-dialog .dialog-close { background: #ead6b9; color: #472e1c; }
+#floor-dialog .floor-section {
+  padding: clamp(18px, 4vw, 38px);
+  background: #f5ede0;
+}
+#floor-dialog .floor-section .section-heading { margin-bottom: 10px; }
+#floor-dialog .floor-intro h2 { font-size: clamp(35px, 6vw, 58px); }
+#floor-dialog .floor-intro p { margin-top: 8px; }
+#floor-dialog .floor-features {
+  flex-flow: row wrap;
+  gap: 8px;
+  color: #58432c;
+  font-size: 13px;
+}
+#floor-dialog .floor-features > span {
+  padding: 5px 10px;
+  border: 1px solid #cdb79a;
+  border-radius: 20px;
+}
+#floor-dialog .floor-plan { gap: 14px; }
+#floor-dialog .room {
+  height: 335px;
+  border: 1px solid #b7a083;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 5px #f9f1e4;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 32px, #8c674a12 32px 33px),
+    repeating-linear-gradient(0deg, transparent 0 26px, #8c674a16 26px 27px),
+    #eadcc6;
+}
+#floor-dialog .room-factory { background-color: #e4e4d5; }
+#floor-dialog .room-label {
+  left: 0;
+  right: 0;
+  top: 0;
+  min-height: 77px;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 16px;
+  border-radius: 13px 13px 0 0;
+  color: #fff1de;
+  background: #513626;
+}
+#floor-dialog .room-factory .room-label { background: #424b37; }
+#floor-dialog .room-label small { font-size: 10px; line-height: 1.1; letter-spacing: .13em; }
+#floor-dialog .room-label strong { font: 700 clamp(21px, 3vw, 28px)/1.1 Cambria, Georgia, serif; }
+#floor-dialog .room-label span { color: #fff1de; font-size: 12px; line-height: 1.1; }
+#floor-dialog .table-map {
+  width: clamp(58px, 24%, 96px);
+  height: 49px;
+  min-height: 44px;
+  gap: 4px;
+  border: 1px solid #886247;
+  border-radius: 8px;
+  background: linear-gradient(155deg, #835735, #64402b);
+  color: #fff7eb;
+  box-shadow: 0 3px 0 #553421, 0 5px 9px #38200e28;
+}
+#floor-dialog .room-kitchen .wall-table { left: 13%; }
+#floor-dialog .room-factory .wall-table { right: 13%; }
+#floor-dialog .room-kitchen .center-table { left: auto; right: 13%; }
+#floor-dialog .room-factory .center-table { left: 13%; }
+#floor-dialog .center-table { height: 63px; }
+#floor-dialog .table-map::before,
+#floor-dialog .table-map::after {
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: repeating-linear-gradient(90deg, #896d51 0 42%, transparent 42% 58%, #896d51 58% 100%);
+  pointer-events: none;
+}
+#floor-dialog .table-map::before { top: -8px; }
+#floor-dialog .table-map::after { bottom: -9px; }
+#floor-dialog .table-map span { font: 700 19px/1 Cambria, Georgia, serif; }
+#floor-dialog .table-map small { font-size: 11px; }
+#floor-dialog .table-map[aria-pressed="true"] {
+  border-color: #f6cc8d;
+  background: #405037;
+  box-shadow: 0 0 0 2px #536443, 0 4px 9px #2932244d;
+}
+#floor-dialog .table-map[aria-pressed="true"] span::after {
+  content: ' ✓';
+  color: #ffe0a2;
+  font: 700 12px/1 system-ui, sans-serif;
+}
+#floor-dialog .table-map:focus-visible { outline: 2px solid #563820; outline-offset: 4px; }
+#floor-dialog .entrance-label { left: auto; right: 13%; bottom: 3%; font-size: 10px; }
+#floor-dialog .floor-info {
+  margin-top: 18px;
+  padding: clamp(14px, 3vw, 22px);
+  border: 1px solid #cfb99d;
+  border-radius: 12px;
+  background: #fff8ed;
+}
+#floor-dialog .floor-info p { margin: 5px 0; }
+.floor-preview { border-radius: 14px; background: linear-gradient(140deg, #59391f, #39281b); }
+.floor-preview .mini-room { border-radius: 4px; }
+@media (max-width: 580px) {
+  #floor-dialog .floor-plan { grid-template-columns: minmax(0, 1fr); }
+  #floor-dialog .room { height: 310px; }
+  #floor-dialog .floor-features { margin-top: 12px; }
+  #floor-dialog .floor-info .button { margin-top: 12px; }
+}
 </style></head><body>
 <a class="skip" href="#experiencia">Pular a apresentação</a>
 <header class="header"><a href="#inicio" class="brand" aria-label="Il Maggiore, início"><span>Il Maggiore</span><small>MASSAS ARTESANAIS · MORRETES</small></a><nav class="desktop-nav" aria-label="Navegação principal"><a href="#experiencia">Da fábrica à mesa</a><button data-popup="menu-dialog" aria-haspopup="dialog" aria-controls="menu-dialog">Cardápio</button><a href="#vinhos">Vinhos</a><a href="#visite">Como chegar</a></nav><button type="button" class="header-menu-link" data-popup="menu-dialog" aria-haspopup="dialog" aria-controls="menu-dialog">Ver o cardápio</button><button class="reserve-link" data-popup="floor-dialog" aria-haspopup="dialog" aria-controls="floor-dialog">Reservar <span>↗</span></button><button class="nav-toggle" aria-label="Abrir menu" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button></header>
@@ -1108,7 +1224,7 @@ form label { font-size: 16px; }
 <section id="visite" class="visit section-pad"><div><p class="eyebrow">ENDEREÇO E HORÁRIOS</p><h2>O <span class="sign-name">Il Maggiore</span><br><em>em Morretes</em></h2><address>Rua Fernando Amaro, L6<br>Vila dos Ferroviários · Morretes, Paraná</address><dl><div><dt>À sua espera</dt><dd>Quinta a segunda<br>18h30 às 22h30</dd></div><div><dt>Fale com a casa</dt><dd><a href="tel:+5541996558730">(41) 99655-8730</a><br><a href="https://www.instagram.com/ilmaggioremorretes/" target="_blank" rel="noopener noreferrer">@ilmaggioremorretes ↗</a></dd></div></dl><p class="visit-note">Confirme os horários em feriados e datas especiais.</p><a class="button dark" id="directions" href="https://maps.app.goo.gl/afVyisYVm5eG72zB6" target="_blank" rel="noopener noreferrer">Abrir no Google Maps <span>↗</span></a></div><div class="visit-photo"><img width="1086" height="1448" loading="lazy" alt="Fachada noturna do Il Maggiore com placa iluminada e vista dos dois ambientes" decoding="async" src="media/dcc0b4a72a5ae7ef.webp"><div><span>MORRETES · PARANÁ</span><p>Entre.<br><em>A casa é sua.</em></p></div></div></section>
 </main>
 <nav class="contact-corners" aria-label="Horário e contato"><a class="opening-status" href="#visite" aria-label="Consultar horário de funcionamento"><span class="status-dot" aria-hidden="true"></span><span id="opening-label">Consulte os horários</span></a><a class="contact-tab" href="https://wa.me/5541996558730?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20o%20Il%20Maggiore." target="_blank" rel="noopener noreferrer" aria-label="Conversar com o Il Maggiore no WhatsApp"><span class="contact-flag" aria-hidden="true"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.63 15.05L2 22l5.08-1.33A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.13-1.13l-.29-.17-3 .79.8-2.93-.19-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.12c-.25-.12-1.46-.72-1.69-.8-.23-.09-.39-.13-.55.12-.17.25-.64.8-.78.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.45-1.37-1.7-.14-.24-.01-.37.11-.49.11-.11.25-.29.37-.43.13-.14.17-.24.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.43h-.47c-.16 0-.42.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.37 1 2.54c.12.16 1.73 2.64 4.19 3.7.58.25 1.03.4 1.39.51.58.18 1.1.16 1.51.1.46-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.29Z"></path></svg></span></a></nav><footer class="footer"><a class="brand" href="#inicio"><span>il maggiore</span><small>MASSAS ARTESANAIS · MORRETES</small></a><p>Da nossa fábrica à sua mesa.</p><div><button data-popup="reviews-dialog" aria-haspopup="dialog" aria-controls="reviews-dialog">Avaliações dos visitantes ↗</button><a href="https://www.instagram.com/ilmaggioremorretes/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><button id="privacy-open">Privacidade</button><a href="#inicio">Voltar ao início ↑</a></div><small>© 2026 <span class="sign-name">Il Maggiore</span> Massas Artesanais. Todos os direitos reservados.</small></footer>
-<dialog id="floor-dialog" class="content-dialog" aria-label="Conheça os ambientes e escolha suas mesas"><div class="dialog-toolbar"><span>IL MAGGIORE</span><button class="dialog-close" data-close aria-label="Fechar Conheça os ambientes e escolha suas mesas">×</button></div><section id="ambientes" class="floor-section section-pad"><div class="section-heading"><p class="eyebrow">CONHEÇA OS AMBIENTES</p><span>Uma casa, duas maneiras de viver a experiência.</span></div><div class="floor-intro"><div><h2>Escolha sua mesa</h2><p>Dois ambientes para acompanhar de perto o que fazemos: um de frente para a cozinha e outro para a fábrica de massas.</p></div><div class="floor-features"><span>✳ Ar-condicionado no ambiente da fábrica</span><span>♡ Recebemos pets</span></div></div><div class="floor-wrap"><div class="floor-plan" aria-label="Planta ilustrativa das mesas do Il Maggiore"><div class="room room-kitchen"><div class="room-label"><small>AMBIENTE 01</small><strong>Cozinha aberta</strong><span>▤ Cozinha e balcão</span></div><button type="button" class="table-map wall-table" style="--x:6%;--y:27%" data-table="C1" data-room="Cozinha aberta" data-capacity="4" aria-label="Mesa C1, elevada junto à parede, 4 pessoas, ambiente cozinha" aria-pressed="false"><span>C1</span><small>4 lugares</small></button><button type="button" class="table-map wall-table" style="--x:6%;--y:51%" data-table="C2" data-room="Cozinha aberta" data-capacity="4" aria-label="Mesa C2, elevada junto à parede, 4 pessoas, ambiente cozinha" aria-pressed="false"><span>C2</span><small>4 lugares</small></button><button type="button" class="table-map wall-table" style="--x:6%;--y:75%" data-table="C3" data-room="Cozinha aberta" data-capacity="4" aria-label="Mesa C3, elevada junto à parede, 4 pessoas, ambiente cozinha" aria-pressed="false"><span>C3</span><small>4 lugares</small></button><button type="button" class="table-map center-table" style="--x:64%;--y:56%" data-table="C4" data-room="Cozinha aberta" data-capacity="6" aria-label="Mesa C4, mesa normal, 6 pessoas, ambiente cozinha" aria-pressed="false"><span>C4</span><small>6 lugares</small></button><div class="entrance-label">↗ ENTRADA</div></div><div class="room room-factory"><div class="room-label"><small>AMBIENTE 02</small><strong>Fábrica de massas</strong><span>❄ Ar-condicionado</span></div><button type="button" class="table-map wall-table" style="--x:67%;--y:27%" data-table="F1" data-room="Fábrica de massas" data-capacity="4" aria-label="Mesa F1, elevada junto à parede, 4 pessoas, ambiente fábrica" aria-pressed="false"><span>F1</span><small>4 lugares</small></button><button type="button" class="table-map wall-table" style="--x:67%;--y:51%" data-table="F2" data-room="Fábrica de massas" data-capacity="4" aria-label="Mesa F2, elevada junto à parede, 4 pessoas, ambiente fábrica" aria-pressed="false"><span>F2</span><small>4 lugares</small></button><button type="button" class="table-map wall-table" style="--x:67%;--y:75%" data-table="F3" data-room="Fábrica de massas" data-capacity="4" aria-label="Mesa F3, elevada junto à parede, 4 pessoas, ambiente fábrica" aria-pressed="false"><span>F3</span><small>4 lugares</small></button><button type="button" class="table-map center-table" style="--x:8%;--y:56%" data-table="F4" data-room="Fábrica de massas" data-capacity="6" aria-label="Mesa F4, mesa normal, 6 pessoas, ambiente fábrica" aria-pressed="false"><span>F4</span><small>6 lugares</small></button></div></div></div><div class="floor-info"><div><strong id="selected-table" role="status">Nenhuma mesa selecionada.</strong><p>Toque em uma ou mais mesas para selecionar. Toque novamente para desmarcar.</p><p>Representação aproximada a partir da planta do local. As mesas junto às paredes são elevadas; as centrais são mesas normais.</p><small>Identificações ilustrativas. A escolha não garante disponibilidade; a equipe confirmará a reserva.</small></div><button type="button" class="button dark" data-reserve>Solicitar reserva <span>↗</span></button></div></section></dialog><dialog id="reviews-dialog" class="content-dialog" aria-label="Avaliações dos visitantes"><div class="dialog-toolbar"><span>IL MAGGIORE</span><button class="dialog-close" data-close aria-label="Fechar Avaliações dos visitantes">×</button></div><section id="avaliacoes" class="reviews section-pad"><div class="review-heading"><div><p class="eyebrow">AVALIAÇÕES</p><h2>O que dizem<br><em>sobre a casa</em></h2></div><a class="rating" href="https://maps.app.goo.gl/afVyisYVm5eG72zB6" target="_blank" rel="noopener noreferrer"><span class="rating-value">5,0<span>/5</span></span><span class="rating-stars" aria-label="Cinco de cinco">★★★★★</span><span>Google · mais de 400 avaliações ↗</span></a></div><div class="quotes" id="quotes"></div><div class="reviews-bottom"><span>Trechos de avaliações compartilhadas pelos visitantes. Confira os relatos completos no Google.</span><a id="google-reviews" class="text-link action-link" href="https://maps.app.goo.gl/afVyisYVm5eG72zB6" target="_blank" rel="noopener noreferrer">Ver avaliações no Google ↗</a></div></section>
+<dialog id="floor-dialog" class="content-dialog" aria-label="Conheça os ambientes e escolha suas mesas"><div class="dialog-toolbar"><span>IL MAGGIORE</span><button class="dialog-close" data-close aria-label="Fechar Conheça os ambientes e escolha suas mesas">×</button></div><section id="ambientes" class="floor-section section-pad"><div class="section-heading"><p class="eyebrow">CONHEÇA OS AMBIENTES</p></div><div class="floor-intro"><div><h2>Escolha sua mesa</h2><p>Escolha uma ou mais mesas na cozinha aberta ou na fábrica de massas.</p></div><div class="floor-features"><span>✳ Ar-condicionado no ambiente da fábrica</span><span>♡ Recebemos pets</span></div></div><div class="floor-wrap"><div class="floor-plan" aria-label="Planta ilustrativa das mesas do Il Maggiore"><div class="room room-kitchen" role="group" aria-labelledby="floor-kitchen-title"><div class="room-label"><small>AMBIENTE 01</small><strong id="floor-kitchen-title">Cozinha aberta</strong><span>▤ Cozinha e balcão</span></div><button type="button" class="table-map wall-table" style="--x:6%;--y:27%" data-table="C1" data-room="Cozinha aberta" data-capacity="4" aria-label="Mesa C1, elevada junto à parede, 4 pessoas, ambiente cozinha" aria-pressed="false"><span>C1</span><small>4 lugares</small></button><button type="button" class="table-map wall-table" style="--x:6%;--y:51%" data-table="C2" data-room="Cozinha aberta" data-capacity="4" aria-label="Mesa C2, elevada junto à parede, 4 pessoas, ambiente cozinha" aria-pressed="false"><span>C2</span><small>4 lugares</small></button><button type="button" class="table-map wall-table" style="--x:6%;--y:75%" data-table="C3" data-room="Cozinha aberta" data-capacity="4" aria-label="Mesa C3, elevada junto à parede, 4 pessoas, ambiente cozinha" aria-pressed="false"><span>C3</span><small>4 lugares</small></button><button type="button" class="table-map center-table" style="--x:64%;--y:56%" data-table="C4" data-room="Cozinha aberta" data-capacity="6" aria-label="Mesa C4, mesa normal, 6 pessoas, ambiente cozinha" aria-pressed="false"><span>C4</span><small>6 lugares</small></button><div class="entrance-label">↗ ENTRADA</div></div><div class="room room-factory" role="group" aria-labelledby="floor-factory-title"><div class="room-label"><small>AMBIENTE 02</small><strong id="floor-factory-title">Fábrica de massas</strong><span>❄ Ar-condicionado</span></div><button type="button" class="table-map wall-table" style="--x:67%;--y:27%" data-table="F1" data-room="Fábrica de massas" data-capacity="4" aria-label="Mesa F1, elevada junto à parede, 4 pessoas, ambiente fábrica" aria-pressed="false"><span>F1</span><small>4 lugares</small></button><button type="button" class="table-map wall-table" style="--x:67%;--y:51%" data-table="F2" data-room="Fábrica de massas" data-capacity="4" aria-label="Mesa F2, elevada junto à parede, 4 pessoas, ambiente fábrica" aria-pressed="false"><span>F2</span><small>4 lugares</small></button><button type="button" class="table-map wall-table" style="--x:67%;--y:75%" data-table="F3" data-room="Fábrica de massas" data-capacity="4" aria-label="Mesa F3, elevada junto à parede, 4 pessoas, ambiente fábrica" aria-pressed="false"><span>F3</span><small>4 lugares</small></button><button type="button" class="table-map center-table" style="--x:8%;--y:56%" data-table="F4" data-room="Fábrica de massas" data-capacity="6" aria-label="Mesa F4, mesa normal, 6 pessoas, ambiente fábrica" aria-pressed="false"><span>F4</span><small>6 lugares</small></button></div></div></div><div class="floor-info"><div><strong id="selected-table" role="status">Nenhuma mesa selecionada.</strong><p>Selecione as mesas no mapa. Toque novamente para desmarcar.</p><p>Na planta, as mesas junto às paredes são elevadas. As centrais têm altura normal.</p><small>Identificações ilustrativas. A escolha não garante disponibilidade; a equipe confirmará a reserva.</small></div><button type="button" class="button dark" data-reserve>Solicitar reserva <span>↗</span></button></div></section></dialog><dialog id="reviews-dialog" class="content-dialog" aria-label="Avaliações dos visitantes"><div class="dialog-toolbar"><span>IL MAGGIORE</span><button class="dialog-close" data-close aria-label="Fechar Avaliações dos visitantes">×</button></div><section id="avaliacoes" class="reviews section-pad"><div class="review-heading"><div><p class="eyebrow">AVALIAÇÕES</p><h2>O que dizem<br><em>sobre a casa</em></h2></div><a class="rating" href="https://maps.app.goo.gl/afVyisYVm5eG72zB6" target="_blank" rel="noopener noreferrer"><span class="rating-value">5,0<span>/5</span></span><span class="rating-stars" aria-label="Cinco de cinco">★★★★★</span><span>Google · mais de 400 avaliações ↗</span></a></div><div class="quotes" id="quotes"></div><div class="reviews-bottom"><span>Trechos de avaliações compartilhadas pelos visitantes. Confira os relatos completos no Google.</span><a id="google-reviews" class="text-link action-link" href="https://maps.app.goo.gl/afVyisYVm5eG72zB6" target="_blank" rel="noopener noreferrer">Ver avaliações no Google ↗</a></div></section>
 </dialog><dialog id="details-dialog" class="content-dialog" aria-label="Detalhes da casa"><div class="dialog-toolbar"><span>IL MAGGIORE</span><button class="dialog-close" data-close aria-label="Fechar Detalhes da casa">×</button></div><div class="house-details" aria-labelledby="house-details-title"><div class="house-details-intro"><p class="eyebrow">OS DETALHES DA CASA</p><h3 id="house-details-title">O que você encontra<br><em>no <span class="sign-name">Il Maggiore</span></em></h3><p>Venha em família, com amigos ou com seu pet. A casa tem espaço para uma boa conversa.</p></div><div class="house-details-grid"><article><span aria-hidden="true">♡</span><div><h4>Pets são bem-vindos</h4><p>Seu companheiro de quatro patas também pode vir.</p></div></article><article><span aria-hidden="true">✳</span><div><h4>Conforto em dois ambientes</h4><p>Escolha entre a vista da cozinha ou da fábrica, onde há ar-condicionado.</p></div></article><article><span aria-hidden="true">◌</span><div><h4>Para os pequenos</h4><p>Para crianças, há opção de meia massa por um valor menor.</p></div></article><article><span aria-hidden="true">◇</span><div><h4>Vinho e boa conversa</h4><p>Bons vinhos e anfitriões que gostam de receber e conversar.</p></div></article><article><span aria-hidden="true">✧</span><div><h4>Generosidade à mesa</h4><p>Massas próprias, pratos bem servidos e preços acessíveis.</p></div></article><article><span aria-hidden="true">✺</span><div><h4>Receber é um prazer</h4><p>Atendimento próximo e uma casa feita para aproveitar sem pressa.</p></div></article></div></div></dialog><dialog id="reservation-dialog" aria-labelledby="reservation-title"><div class="dialog-toolbar"><span>IL MAGGIORE</span><button class="dialog-close" data-close aria-label="Fechar reserva">×</button></div><p class="eyebrow">UMA MESA PARA VOCÊ</p><h2 id="reservation-title">Solicite sua reserva</h2><p class="dialog-intro">Prepare sua solicitação e envie à equipe pelo WhatsApp. Consulte também a promoção para reservas.</p><form id="reservation-form"><p class="chosen-table-note" aria-live="polite">Se desejar, escolha uma ou mais mesas na planta.</p><button type="button" class="text-link change-table action-link" data-popup="floor-dialog" aria-haspopup="dialog" aria-controls="floor-dialog">Ver ou alterar mesas ↗</button><div class="form-row"><label>Dia da visita<input type="date" name="date" required></label><label>Horário<select name="time" required><option value="">Selecione</option><option>18:30</option><option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option></select></label></div><label>Quantas pessoas?<select name="guests" required><option value="">Selecione</option><option value="1">1 pessoa</option><option value="2">2 pessoas</option><option value="3">3 pessoas</option><option value="4">4 pessoas</option><option value="5">5 pessoas</option><option value="6">6 pessoas</option><option value="7">7 ou mais pessoas</option></select></label><label>Alguma preferência? <span>(opcional)</span><textarea name="preferences" maxlength="300" rows="2" placeholder="Ex.: acesso sem degraus, uma ocasião especial…"></textarea></label><p id="form-status" role="status"></p><button class="button dark" type="submit">Preparar solicitação <span>↗</span></button></form><div id="reservation-ready" hidden><p>Sua mensagem está pronta.</p><pre id="message-preview"></pre><a class="button dark" id="send-reservation" href="#" target="_blank" rel="noopener noreferrer">Abrir WhatsApp para enviar ↗</a><button class="text-link action-link" id="edit-reservation">Alterar dados</button></div><p class="dialog-note">A reserva só está confirmada após a resposta da equipe. Os dados ficam nesta página até você abrir o WhatsApp. Prefere ligar? <a href="tel:+5541996558730">(41) 99655-8730</a>.</p></dialog>
 <dialog id="gallery-dialog" class="gallery-dialog" aria-label="Fotografia ampliada"><div class="dialog-toolbar"><span>IL MAGGIORE</span><button class="dialog-close" data-close aria-label="Fechar fotografia">×</button></div><img id="gallery-image" alt="" decoding="async"><p id="gallery-caption"></p></dialog>
 <dialog id="privacy-dialog" aria-labelledby="privacy-title"><div class="dialog-toolbar"><span>IL MAGGIORE</span><button class="dialog-close" data-close aria-label="Fechar privacidade">×</button></div><p class="eyebrow">PRIVACIDADE</p><h2 id="privacy-title">Política de privacidade</h2><p><strong>Responsável pelos dados das reservas.</strong> O <span class="sign-name">Il Maggiore</span> Massas Artesanais recebe e usa as informações para responder ao seu pedido e organizar sua visita. Para assuntos de privacidade, fale com o restaurante pelo <a href="tel:+5541996558730">(41) 99655-8730</a>.</p>
