@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "migrationPending": true,
+  "items": [
+    {
+      "id": "spaghetti-mozzarella",
+      "name": "Spaghetti com tomate e mozzarella",
+      "category": "Massas",
+      "description": "Molho de tomate, mozzarella e manjericão",
+      "cents": 3500,
+      "active": true
+    },
+    {
+      "id": "talhatelle-funghi",
+      "name": "Talhatelle molho funghi",
+      "category": "Massas",
+      "description": "Salsinha, alho, cebola, funghi e creme de leite",
+      "cents": 3500,
+      "active": true
+    },
+    {
+      "id": "macheroni-quatro-queijos",
+      "name": "Macheroni 4 queijos",
+      "category": "Massas",
+      "description": "Gorgonzola, queijos minas maturados, mozzarella e creme de leite",
+      "cents": 3500,
+      "active": true
+    },
+    {
+      "id": "carbonara",
+      "name": "Carbonara",
+      "category": "Massas",
+      "description": "Ovos, queijo parmesão, pancetta e pimenta-do-reino",
+      "cents": 3500,
+      "active": true
+    },
+    {
+      "id": "talhatelle-pesto",
+      "name": "Talhatelle ao molho pesto e verduras",
+      "category": "Massas",
+      "description": "Molho de manjericão, nozes, azeite e verduras",
+      "cents": 3500,
+      "active": true
+    },
+    {
+      "id": "talhatelle-bolonhesa",
+      "name": "Talhatelle à bolonhesa",
+      "category": "Massas",
+      "description": "Molho de tomate com carne moída, vinho tinto e creme de leite",
+      "cents": 3500,
+      "active": true
+    },
+    {
+      "id": "spaghetti-frutos-do-mar",
+      "name": "Spaghetti frutos do mar",
+      "category": "Massas",
+      "description": "Molho de tomate, alho, salsinha, lulas, camarões, mexilhões e manjericão",
+      "cents": 5500,
+      "active": true
+    },
+    {
+      "id": "macheroni-arrabbiata",
+      "name": "Macheroni all’arrabbiata",
+      "category": "Massas",
+      "description": "Molho de tomate, alho, azeite de oliva e pimenta dedo-de-moça",
+      "cents": 3500,
+      "active": true
+    },
+    {
+      "id": "talhatelle-manteiga-salvia",
+      "name": "Talhatelle ao molho manteiga e sálvia",
+      "category": "Massas",
+      "description": "Folhas de sálvia “da chácara” maceradas na manteiga",
+      "cents": 3500,
+      "active": true
+    },
+    {
+      "id": "tiramisu",
+      "name": "Tiramisù",
+      "category": "Sobremesas",
+      "description": "Um dos favoritos de quem visita a casa.",
+      "cents": 1500,
+      "active": true
+    },
+    {
+      "id": "parmesao-extra",
+      "name": "Queijo parmesão extra",
+      "category": "Extras",
+      "description": "40 g",
+      "cents": 1200,
+      "active": true
+    }
+  ]
+}

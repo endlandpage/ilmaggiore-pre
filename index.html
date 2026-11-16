@@ -433,6 +433,11 @@ body.keyboard-navigation dialog[open]{animation:none}
   .hero-stage {position:relative;height:100svh;min-height:360px;}
   .hero-story[data-story-ready] .hero-runway {display:none;}
 }
+.menu-category + .menu-category { margin-top: 24px; }
+.menu-category > h3 { font-size: clamp(24px, 4vw, 32px); margin: 0 0 12px; }
+.menu-dish h4 { margin: 0; font: inherit; font-family: var(--font-display, Georgia, serif); font-size: clamp(22px, 4vw, 26px); line-height: 1.14; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.menu-category .dessert-card { margin-bottom: 12px; }
+[data-price-photo][hidden] { display: none !important; }
 </style><style id="desktop-hero-composition">/* Desktop composition; mobile retains its existing immersive layout. */
 .hero-desktop-only {display:none;}
 @media (min-width:761px) {
@@ -1568,4 +1573,4 @@ form label { font-size: 16px; }
   menu.querySelector('.wine-menu-tabs').hidden = false;
 })();
 </script>
-<script src="assets/precos-cardapio.js" defer></script></body></html>
+<script src="assets/precos-cardapio.js?v=2" defer></script></body></html>
