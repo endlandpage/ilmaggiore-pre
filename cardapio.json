@@ -88,14 +88,6 @@
       "description": "40 g",
       "cents": 1200,
       "active": true
-    },
-    {
-      "id": "novo-talhatelle-4-queijos",
-      "name": "Talhatelle 4 queijos",
-      "category": "Massas",
-      "description": "Gorgonzola, queijos minas maturados, mozzarella e creme de leite",
-      "cents": 4400,
-      "active": true
     }
   ]
 }
