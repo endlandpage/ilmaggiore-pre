@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ilmaggiore-pre.onrender.com/sitemap.xml
+Sitemap: https://ilmaggiore.com.br/sitemap.xml
