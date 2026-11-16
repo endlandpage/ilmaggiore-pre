@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR"><head>
-<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-/PRR0jdTi20qUXd5dvbbuqDKFX5bT9GHV5wALKP8pPY=' 'sha256-U8OMkXhqyhWgd/uG6lthKnAMFa+tTvxbAtAxPA/7s5g=' 'sha256-6C56G3YXAx7PaovlRBsYyPhqBMv+0+MH3u+XwplK2QU='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: data:; font-src 'self' data:; frame-src 'none'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="theme-color" content="#251c16"><title>Il Maggiore | Da nossa fábrica à sua mesa · Morretes</title><meta name="description" content="Uma fábrica de massas artesanais com restaurante em Morretes. Conheça a produção, a cozinha aberta e o acolhimento do Il Maggiore."><meta property="og:title" content="Il Maggiore | A massa nasce aqui."><meta property="og:description" content="Da nossa fábrica à sua mesa. Massas artesanais, cozinha aberta e uma casa acolhedora em Morretes."><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-TaOIsSvrpnu9owyDp54ke06nx13hd02qpBrX4z8uw5o=' 'sha256-U8OMkXhqyhWgd/uG6lthKnAMFa+tTvxbAtAxPA/7s5g=' 'sha256-6C56G3YXAx7PaovlRBsYyPhqBMv+0+MH3u+XwplK2QU='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: data:; font-src 'self' data:; frame-src 'none'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="strict-origin-when-cross-origin"><meta name="theme-color" content="#251c16"><title>Il Maggiore | Da nossa fábrica à sua mesa · Morretes</title><meta name="description" content="Uma fábrica de massas artesanais com restaurante em Morretes. Conheça a produção, a cozinha aberta e o acolhimento do Il Maggiore."><meta property="og:title" content="Il Maggiore | A massa nasce aqui."><meta property="og:description" content="Da nossa fábrica à sua mesa. Massas artesanais, cozinha aberta e uma casa acolhedora em Morretes."><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
 <link rel="canonical" href="https://ilmaggiore.com.br/">
 <meta property="og:url" content="https://ilmaggiore.com.br/">
 <meta property="og:image" content="https://ilmaggiore.com.br/assets/il-maggiore-compartilhar.jpg">
@@ -1509,6 +1509,11 @@ form label { font-size: 16px; }
   function syncStatus() {clearInterval(statusTimer);if(!document.hidden){openingStatus();statusTimer=setInterval(openingStatus,60000);}}
   document.addEventListener('visibilitychange',()=>{syncMotion();syncGallery();syncStatus();});
   syncStatus();syncGallery();
+  function openMenuFromHash() {
+    if (location.hash === '#menu') openDialog($('#menu-dialog'));
+  }
+  window.addEventListener('hashchange', openMenuFromHash);
+  openMenuFromHash();
 })();
 </script><script>(() => {
   const wine = document.getElementById('vinhos');
